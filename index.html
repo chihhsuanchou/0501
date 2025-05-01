@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 文字冒險遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>AI 文字冒險遊戲</h1>
+            <div class="player-stats">
+                <span id="health">生命值: 100</span>
+                <span id="gold">金幣: 0</span>
+            </div>
+        </div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="輸入你的選擇或行動...">
+            <button onclick="sendMessage()">確認</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

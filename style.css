@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    background-color: #1a1a1a;
+    height: 100vh;
+    color: #fff;
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #2d2d2d;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,255,0,0.1);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #4CAF50;
+}
+
+.game-header {
+    padding: 15px;
+    border-bottom: 2px solid #4CAF50;
+    text-align: center;
+}
+
+.game-header h1 {
+    margin: 0;
+    color: #4CAF50;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.player-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 18px;
+    color: #4CAF50;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    background: #2d2d2d;
+    border-top: 2px solid #4CAF50;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+button {
+    padding: 12px 24px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #45a049;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    animation: fadeIn 0.5s ease;
+}
+
+.user-message {
+    background: rgba(76, 175, 80, 0.2);
+    margin-left: auto;
+    border: 1px solid #4CAF50;
+    color: #fff;
+}
+
+.ai-message {
+    background: rgba(0, 0, 0, 0.4);
+    margin-right: auto;
+    border: 1px solid #666;
+    color: #4CAF50;
+}
+
+/* 物品使用和獎勵的特殊樣式 */
+.message.item-used {
+    background: rgba(76, 175, 80, 0.3);
+    border: 1px solid #4CAF50;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.message.reward {
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid gold;
+    color: #FFD700;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+    }
+}
